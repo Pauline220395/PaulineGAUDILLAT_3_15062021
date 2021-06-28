@@ -18,13 +18,11 @@ body {
   margin: 0 0 0 0;
 }
 
-#header
-{
+#header {
   padding: 2rem 3rem 2rem 3rem;
 }
 
-.arrow
-{
+.arrow {
   position: absolute;
   align-items: center;
   font-size: 23px;
@@ -32,20 +30,17 @@ body {
   color: #353535;
 }
 
-#logo
-{
+#logo {
   text-align: center;
 }
 
-#banner img 
-{
+#banner img {
   width: 100%;
   max-height: 32rem;
   object-fit: cover;
 }
 
-main
-{
+main {
   background-color: $colour-background;
   margin-top: -4rem;
   border-radius: 2rem 2rem 0 0;
@@ -57,7 +52,6 @@ main
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   padding-top: 20px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
@@ -69,54 +63,64 @@ main
   margin-left: 11%;
 }
 
-.nom-resto i {
-  margin-right: 11%;
-  font-size: 28px;
+.fav {
+  position: relative; /*bloc englobant*/
+  margin-right: 10%;
+  i {
+    color: $colour-icons; 
+    font-size: 30px;
+  }
+  .full-heart{
+    position: absolute; /*élément absolute*/
+    left: 0px; /* a 0-left du bloc englobant*/
+    opacity: 0;
+    &:hover{
+      background: linear-gradient(to top, $colour-primary, $colour-secondary);
+      background-clip: text;
+      color: transparent;
+      opacity: 1;
+      transition: 0.9s ease;
+    }
+  }
+  .empty-heart:hover{
+    opacity: 0;
+  }
 }
 
-#section-menus
-{
-  display: flex;
-  justify-content: space-between;
-  margin: 0 10% 0 10%;
+#section-menus {
+  margin: 0 11% 0 11%;
 }
 
-.menu-block
-{
+.menu-block {
   padding: 1rem;
 }
 
 .menu-block  h2 {
-  margin-right: 85%;
+  width: 50px;
   padding-bottom: 5px;
   font-size: 18px;
   font-weight: lighter;
   border-bottom-style: solid;
-  border-bottom-width: 3px;
+  border-bottom-width: 4px;
   border-color: #99E2D0;
 }
 
 .menu {
   display: flex;
-  justify-content: space-between;
   overflow: hidden;
   background-color: $colour-white;
   width: 100%;
   margin: 1.5rem 0;
   border-radius: 10px;
+  padding: 1rem;
 }
-
-/*.menu:hover .check
-{
-
-}*/
 
 @keyframes fadeIn
 {
   from {
     transform: scale(0);
   }
-
+  
   to {
     transform: scale(1);
   }
@@ -159,36 +163,73 @@ main
 }
 
 .menu-text {
-  padding: 1rem 0 1rem 1rem;
-  flex-direction: column;
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menu-text .title {
   margin: 0 0 0 0;
-  padding-bottom: 5px;
-  text-overflow: ellipsis;
+  font-size: 20px;
   white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 
 .menu-text .description {
   margin: 0 0 0 0;
-  font-size: 20px;
-  text-overflow: ellipsis;
+  font-size: 17px;
   white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.price
-{
+.title {
+  margin: 0 0 0 0;
+  font-size: 17px;
+  padding-top: 3px;
+}
+
+.menu-prix {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.price {
   display: flex;
   font-weight: bold;
   align-items: flex-end;
-  padding: 1rem;
+  padding-left: 10px;
 }
 
-.btn-box
-{
+.menu:hover .check {
+  margin-right: -1rem;
+}
+
+.menu:hover .check-icon {
+  transform: rotate(0deg);
+}
+
+.check {
+  background-color: $colour-tertiary;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .5s;
+}
+
+.check-icon {
+  color: $colour-white;
+  font-size: 30px;
+  font-weight: bold;
+  transform: rotate(180deg);
+  transition-duration: .5s;
+}
+
+.btn-box {
   text-align: center;
 }
 
@@ -226,28 +267,24 @@ main
   }
 }
 
-.btn a
-{
+.btn a {
   color: white;
   text-decoration: none;
 }
 
-#footer-box
-{
+#footer-box {
   background-color: $colour-footer;
   padding-top: 30px;
 }
 
-.ohmyfood
-{
+.ohmyfood {
   font-family:'Shrikhand';
   font-size: 26px;
   color: $colour-white;
   margin-left: 8%;
 }
 
-.footer-text
-{
+.footer-text {
   margin-left: 8%;
   color: $colour-white;
   padding: 20px 0 20px 0;
@@ -255,51 +292,53 @@ main
   font-size: 20px;
 }
 
-.footer-text a
-{
+.footer-text a {
   text-decoration: none;
   color: $colour-white;
 }
 
-.footer-text a:hover
-{
+.footer-text a:hover {
   text-decoration: underline;
 }
 
-.footer-block
-{
+.footer-block {
   display: flex;
 }
 
-.utensils
-{
+.utensils {
   padding: 0 25px 0 5px;
 }
 
-.hands
-{
+.hands {
   padding-right: 20px;
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 
-@media all and (min-width: 440px) and (max-width: 1434px)
+@media all and (min-width: 440px) and (max-width: 1200px)
 {
   
-  #section-menus
-  {
+  #section-menus {
+    display: flex;
     flex-direction: column;
-    margin: 0 10px;
+    margin: 0 10px 0 10px; 
   }
   
-  .nom-resto h1 
-  {
-    
+  .menu {
+    padding: 15px;
+    width: auto;
+  }
+  
+  .nom-resto h1 {  
     margin-left: 30px;
   }
   
-  .nom-resto i 
-  {
+  .nom-resto i {
+    margin-right: auto;
+  }
+  
+  .fav {
+    position: relative; /*bloc englobant*/
     margin-right: 30px;
   }
   
@@ -309,25 +348,26 @@ main
 
 @media all and (min-width: 316px) and (max-width: 439px)
 {
-  #header
-  {
+  #header {
     padding: 2rem 1.5rem 2rem 1.5rem;
   }
   
-  #section-menus
-  {
+  #section-menus {
     flex-direction: column;
     margin: 0 5px;
   }
   
-  .nom-resto h1 {
-    
-    margin-left: 30px;
+  .menu {
+    width: auto;
+  }
+  
+  .nom-resto h1 {  
+    margin-left: 20px;
     font-size: 26px;
   }
   
   .nom-resto i {
-    margin-right: 30px;
+    margin-right: auto;
   }
   
   .title {
@@ -339,8 +379,7 @@ main
     font-size: 14px;
   }
   
-  .ohmyfood
-  {
+  .ohmyfood {
     font-size: 24px;
   }
   
@@ -350,11 +389,9 @@ main
 
 @media all and (max-width: 315px)
 {
-  #header
-  {
+  #header {
     padding: 2rem 0.9rem 2rem 0.9rem;
-  }
-  
+  }  
 }
 
 /*-------------------------------------------Tablettes version--------------------------------------*/

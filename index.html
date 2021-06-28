@@ -13,10 +13,24 @@
 </head>
 
 <body>
+
+  <div class="loader">
+		<div class="loading">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+		</div>
+  </div>
   
   <header>
     
-    <div id="logo"><img src="images/logo/ohmyfood.svg" alt="Logo Ohmyfood"/></div>
+    <div id="logo">
+      <a href="index.html">
+        <img src="images/logo/ohmyfood.svg" alt="Logo Ohmyfood"/>
+      </a>
+    </div>
     
   </header>
   
@@ -76,35 +90,38 @@
         
         <div class="restaurants-cards">
           <a href="La_palette_du_gout.html">
-            <span class="new">Nouveau</span> <!-- Etiquette Nouveau-->
-            <img src="images/restaurants/lapalettedugout.jpg" alt="La palette du goût">
+            <figure class="new-box">
+              <img src="images/restaurants/lapalettedugout.jpg" alt="La palette du goût">
+              <figcaption class="new">Nouveau</figcaption><!-- Etiquette Nouveau-->
+            </figure>
             <div class="description-cards">
               <div class="text-cards">
-              <h3>La palette du goût</h3>
-              <p>Ménilmontant</p>
+                <h3>La palette du goût</h3>
+                <p>Ménilmontant</p>
               </div>
-              <div class="fav-btn">             
-                <div class="empty-heart"><i class="far fa-heart"></i></div>
-                <div class="transition-coeur"></div>
-                <div class="full-heart"><i class="fas fa-heart"></i></div>
-              </div> 
+              <div class="fav">
+                <i class="far fa-heart empty-heart"></i>
+                <i class="fas fa-heart full-heart"></i>
+              </div>
             </div>
           </a>
         </div>
         
         <div class="restaurants-cards">
           <a href="#">
-            <span class="new">Nouveau</span><!-- Etiquette Nouveau-->
-            <img src="images/restaurants/lanoteenchantée.jpg" alt="La note enchantée">
+            <figure class="new-box">
+              <img src="images/restaurants/lanoteenchantée.jpg" alt="La note enchantée">
+              <figcaption class="new">Nouveau</figcaption><!-- Etiquette Nouveau-->
+            </figure>
             <div class="description-cards">
               <div class="text-cards">
                 <h3>La note enchantée</h3>
                 <p>Charonne</p>
               </div>
-              <div class="fav-btn">             
-                <div class="empty-heart"><i class="far fa-heart"></i></div>
-                <div class="full-heart"><i class="fas fa-heart"></i></div>
-              </div> 
+              <div class="fav">
+                <i class="far fa-heart empty-heart"></i>
+                <i class="fas fa-heart full-heart"></i>
+              </div>
             </div>
           </a>  
         </div>
@@ -117,10 +134,10 @@
                 <h3>A la française</h3>
                 <p>Cité Rouge</p>
               </div> 
-              <div class="fav-btn">             
-                <div class="empty-heart"><i class="far fa-heart"></i></div>
-                <div class="full-heart"><i class="fas fa-heart"></i></div>
-              </div> 
+              <div class="fav">
+                <i class="far fa-heart empty-heart"></i>
+                <i class="fas fa-heart full-heart"></i>
+              </div>
             </div>
           </a>
         </div>
@@ -133,10 +150,10 @@
               <h3>Le délice des sens</h3>
               <p>Folie-Méricourt</p>
             </div> 
-                <div class="fav-btn">             
-                  <div class="empty-heart"><i class="far fa-heart"></i></div>
-                  <div class="full-heart"><i class="fas fa-heart"></i></div>
-                </div>   
+            <div class="fav">
+              <i class="far fa-heart empty-heart"></i>
+              <i class="fas fa-heart full-heart"></i>
+            </div> 
             </div> 
           </a>          
         </div>
@@ -163,7 +180,8 @@
         </div>
       
       <div><a href="#">Mentions légales</a></div>
-      <div><a href="#">Contact</a></div>
+      <div><a href="mailto:contactohmyfood.com">Contact</a></div>
+
       
     </div>
     

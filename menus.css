@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Shrikhand";
   src: url("fonts/Shrikhand/Shrikhand.ttf");
@@ -48,7 +49,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   padding-top: 20px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
@@ -60,15 +60,36 @@ main {
   margin-left: 11%;
 }
 
-.nom-resto i {
-  margin-right: 11%;
-  font-size: 28px;
+.fav {
+  position: relative;
+  /*bloc englobant*/
+  margin-right: 10%;
+}
+.fav i {
+  color: #7e7e7e;
+  font-size: 30px;
+}
+.fav .full-heart {
+  position: absolute;
+  /*élément absolute*/
+  left: 0px;
+  /* a 0-left du bloc englobant*/
+  opacity: 0;
+}
+.fav .full-heart:hover {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  opacity: 1;
+  transition: 0.9s ease;
+}
+.fav .empty-heart:hover {
+  opacity: 0;
 }
 
 #section-menus {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 10% 0 10%;
+  margin: 0 11% 0 11%;
 }
 
 .menu-block {
@@ -76,29 +97,25 @@ main {
 }
 
 .menu-block h2 {
-  margin-right: 85%;
+  width: 50px;
   padding-bottom: 5px;
   font-size: 18px;
   font-weight: lighter;
   border-bottom-style: solid;
-  border-bottom-width: 3px;
+  border-bottom-width: 4px;
   border-color: #99E2D0;
 }
 
 .menu {
   display: flex;
-  justify-content: space-between;
   overflow: hidden;
   background-color: white;
   width: 100%;
   margin: 1.5rem 0;
   border-radius: 10px;
+  padding: 1rem;
 }
 
-/*.menu:hover .check
-{
-
-}*/
 @-webkit-keyframes fadeIn {
   from {
     transform: scale(0);
@@ -107,6 +124,7 @@ main {
     transform: scale(1);
   }
 }
+
 @keyframes fadeIn {
   from {
     transform: scale(0);
@@ -161,31 +179,70 @@ main {
 }
 
 .menu-text {
-  padding: 1rem 0 1rem 1rem;
-  flex-direction: column;
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menu-text .title {
   margin: 0 0 0 0;
-  padding-bottom: 5px;
-  text-overflow: ellipsis;
+  font-size: 20px;
   white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 
 .menu-text .description {
   margin: 0 0 0 0;
-  font-size: 20px;
-  text-overflow: ellipsis;
+  font-size: 17px;
   white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.title {
+  margin: 0 0 0 0;
+  font-size: 17px;
+  padding-top: 3px;
+}
+
+.menu-prix {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .price {
   display: flex;
   font-weight: bold;
   align-items: flex-end;
-  padding: 1rem;
+  padding-left: 10px;
+}
+
+.menu:hover .check {
+  margin-right: -1rem;
+}
+
+.menu:hover .check-icon {
+  transform: rotate(0deg);
+}
+
+.check {
+  background-color: #99E2D0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+
+.check-icon {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
 }
 
 .btn-box {
@@ -271,10 +328,16 @@ main {
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
-@media all and (min-width: 440px) and (max-width: 1434px) {
+@media all and (min-width: 440px) and (max-width: 1200px) {
   #section-menus {
+    display: flex;
     flex-direction: column;
-    margin: 0 10px;
+    margin: 0 10px 0 10px;
+  }
+
+  .menu {
+    padding: 15px;
+    width: auto;
   }
 
   .nom-resto h1 {
@@ -282,6 +345,12 @@ main {
   }
 
   .nom-resto i {
+    margin-right: auto;
+  }
+
+  .fav {
+    position: relative;
+    /*bloc englobant*/
     margin-right: 30px;
   }
 }
@@ -296,13 +365,17 @@ main {
     margin: 0 5px;
   }
 
+  .menu {
+    width: auto;
+  }
+
   .nom-resto h1 {
-    margin-left: 30px;
+    margin-left: 20px;
     font-size: 26px;
   }
 
   .nom-resto i {
-    margin-right: 30px;
+    margin-right: auto;
   }
 
   .title {
