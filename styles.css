@@ -1,8 +1,4 @@
 @charset "UTF-8";
-/* 576px pour les téléphones en portrait
-768px pour les tablettes
-992px pour les ordinateurs portables
-1200px pour les grands écrans*/
 @font-face {
   font-family: "Shrikhand";
   src: url("fonts/Shrikhand/Shrikhand-Regular.ttf");
@@ -32,8 +28,8 @@ body {
   }
 }
 .loader {
-  -webkit-animation: loader 0.01s;
-          animation: loader 0.01s;
+  -webkit-animation: loader 1s;
+          animation: loader 1s;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation-fill-mode: both;
@@ -123,7 +119,7 @@ body {
   }
 }
 header {
-  padding: 2rem 3rem 2rem 3rem;
+  padding: 2rem 3rem;
 }
 
 #logo {
@@ -134,49 +130,46 @@ header {
   text-align: center;
   background-color: #f6f6f6;
 }
-
-.localisation {
-  background-color: #eaeaea;
-  padding: 20px 0;
-  box-shadow: inset 0px 2px 7px #cccccc;
-  font-weight: bold;
-  color: #353535;
-  font-size: 20px;
-}
-
-.localisation i {
-  padding-right: 1%;
-  font-size: 20px;
-  color: #353535;
-}
-
 #section-1 h1 {
-  margin: 30px 0 20px 0;
+  margin: 2rem 0;
   font-weight: 900;
   font-size: 28px;
 }
-
 #section-1 h2 {
-  margin: 0 0 30px 0;
+  margin: 0 0 2rem 0;
   font-size: 20px;
   font-weight: lighter;
 }
 
+.localisation {
+  background-color: #eaeaea;
+  padding: 1.3rem 0;
+  box-shadow: inset 0px 2px 7px #dfdfdf;
+  font-weight: bold;
+  color: #353535;
+  font-size: 20px;
+}
+.localisation i {
+  padding-right: 1.5rem;
+  font-size: 20px;
+  color: #353535;
+}
+
 .btn {
-  border-radius: 50px;
+  border-radius: 3rem;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   font-weight: bold;
-  padding: 18px 17px 18px 17px;
+  padding: 1rem 1.5rem;
   font-size: 17px;
   border: none;
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
   position: relative;
   z-index: 1;
-  box-shadow: 0px 3px 15px #cccccc;
+  box-shadow: 0px 3px 15px #dfdfdf;
 }
 .btn:hover::after {
-  opacity: 0.25;
+  opacity: 0.15;
 }
 .btn::after {
   content: "";
@@ -190,22 +183,20 @@ header {
   z-index: -1;
   transition: opacity 250ms;
   box-shadow: 0px 3px 15px black;
-  border-radius: 50px;
+  border-radius: 3rem;
 }
-
 .btn a {
   color: white;
   text-decoration: none;
 }
 
 #fonctionnement-section {
-  margin: 3rem 8rem;
+  margin: 3rem 11%;
 }
-
 #fonctionnement-section h2 {
   font-weight: bold;
   margin-left: 0;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .fonctionnement {
@@ -218,7 +209,7 @@ header {
   display: flex;
   align-items: center;
   width: 60%;
-  margin: 0 20px;
+  margin: 0 1.5rem;
   position: relative;
 }
 
@@ -235,10 +226,10 @@ header {
 .block {
   display: flex;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   padding: 1rem;
   width: 100%;
-  box-shadow: 0px 2px 15px #cccccc;
+  box-shadow: 0px 2px 15px #dfdfdf;
   /* 1 décalage horizontal - 2 vertical - 3 adoucicement - 4 couleur*/
   z-index: 1;
   position: relative;
@@ -257,14 +248,12 @@ header {
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   box-shadow: 0px 4px 15px #9356DC;
 }
-
 .block i {
   color: #7e7e7e;
 }
-
 .block p {
   font-weight: bold;
 }
@@ -275,12 +264,12 @@ header {
 }
 
 .list {
-  padding: 0 22px 0 22px;
+  padding: 0 22px;
   font-size: 20px;
 }
 
 .store {
-  padding: 0 22px 0 22px;
+  padding: 0 22px;
   font-size: 19px;
 }
 
@@ -288,29 +277,27 @@ header {
   background-color: #f6f6f6;
   padding: 2rem 0;
 }
-
 #Restaurants h2 {
-  margin: 2rem 8rem;
+  margin: 2rem 11%;
 }
 
 .restaurant-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0rem 6rem;
+  margin: 0 9%;
 }
 
 .restaurants-cards {
   background-color: white;
   width: 45%;
   height: 250px;
-  border-radius: 25px;
-  box-shadow: 0 2px 20px #cccccc;
+  border-radius: 2rem;
+  box-shadow: 0 2px 20px #dfdfdf;
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   padding-bottom: 5px;
 }
-
 .restaurants-cards a {
   text-decoration: none;
 }
@@ -339,11 +326,11 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
 
 .restaurants-cards img {
   width: 100%;
-  height: 160px;
+  height: 10rem;
   -o-object-fit: cover;
      object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 
 .description-cards {
@@ -355,27 +342,24 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
 .text-cards {
   flex-direction: column;
   align-items: center;
-  margin: 18px 0 0 20px;
+  margin: 0.8rem 0 0 1.5rem;
 }
-
 .text-cards h3 {
   font-size: 23px;
   color: black;
   width: 100%;
-  line-height: 0;
-  margin-top: 10px;
+  margin: 0 0 5px 0;
 }
-
 .text-cards p {
   font-size: 20px;
   color: black;
-  line-height: 1;
+  margin: 0;
 }
 
 .fav {
   position: relative;
   /*bloc englobant*/
-  margin-right: 40px;
+  margin: 15px 40px 0 0;
 }
 .fav i {
   color: #7e7e7e;
@@ -384,7 +368,7 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
 .fav .full-heart {
   position: absolute;
   /*élément absolute*/
-  left: 0px;
+  left: 0;
   /* a 0-left du bloc englobant*/
   opacity: 0;
 }
@@ -402,29 +386,27 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
 
 #footer-box {
   background-color: #353535;
-  padding-top: 30px;
+  padding-top: 2rem;
 }
 
 .ohmyfood {
   font-family: "Shrikhand";
   font-size: 26px;
   color: white;
-  margin-left: 8%;
+  margin-left: 11%;
 }
 
 .footer-text {
-  margin-left: 8%;
+  margin-left: 11%;
   color: white;
-  padding: 20px 0 20px 0;
+  padding: 1.5rem 0;
   line-height: 200%;
   font-size: 20px;
 }
-
 .footer-text a {
   text-decoration: none;
   color: white;
 }
-
 .footer-text a:hover {
   text-decoration: underline;
 }
@@ -442,7 +424,7 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
 }
 
 /*-----------------------Version Smartphone----------------------*/
-@media all and (min-width: 321px) and (max-width: 1189px) {
+@media all and (max-width: 1300px) {
   .titles-box {
     margin: 0 2rem;
   }
@@ -450,7 +432,6 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
   #fonctionnement-section {
     margin: 3rem 2rem;
   }
-
   #fonctionnement-section h2 {
     margin-left: -10px;
   }
@@ -467,7 +448,7 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
 
   .restaurant-box {
     flex-direction: column;
-    margin: 0rem 1.5rem;
+    margin: 0 1.5rem;
   }
 
   #Restaurants h2 {
@@ -477,8 +458,13 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
   .restaurants-cards {
     width: 100%;
   }
+}
+@media all and (max-width: 330px) {
+  .text-cards h3 {
+    font-size: 18px;
+  }
 
-  .new {
-    margin-left: 0%;
+  .text-cards p {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=styles.css.map */

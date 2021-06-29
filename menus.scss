@@ -19,7 +19,7 @@ body {
 }
 
 #header {
-  padding: 2rem 3rem 2rem 3rem;
+  padding: 2rem 3rem; /*1rem = environ 16px - 1em = 100% de la taille de base du navigateur*/
 }
 
 .arrow {
@@ -27,7 +27,7 @@ body {
   align-items: center;
   font-size: 23px;
   padding-top: 5px;
-  color: #353535;
+  color: $colour-footer-icons;
 }
 
 #logo {
@@ -36,45 +36,57 @@ body {
 
 #banner img {
   width: 100%;
-  max-height: 32rem;
+  max-height: 500px;
   object-fit: cover;
 }
 
 main {
   background-color: $colour-background;
-  margin-top: -4rem;
-  border-radius: 2rem 2rem 0 0;
-  z-index: 1;
+  margin-top: -2.5rem;
+  border-radius: 2.5rem 2.5rem 0 0;
   position: relative;
+}
+
+.main-box
+{
+  margin: 0 11%;
+}
+
+@media all and (max-width: 1665px)
+{
+.main-box
+{
+  margin: 0 2%;
+}
 }
 
 .nom-resto {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 20px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
+  padding-top: 1.5rem;
 }
 
 .nom-resto h1 {
   font-family: "Shrikhand";
   font-size: 30px;
-  margin-left: 11%;
+  padding-left: 1rem;
 }
 
 .fav {
   position: relative; /*bloc englobant*/
-  margin-right: 10%;
+  padding-right: 1rem;
+  
   i {
     color: $colour-icons; 
     font-size: 30px;
   }
-  .full-heart{
+  
+  .full-heart {
     position: absolute; /*élément absolute*/
     left: 0px; /* a 0-left du bloc englobant*/
     opacity: 0;
-    &:hover{
+    &:hover {
       background: linear-gradient(to top, $colour-primary, $colour-secondary);
       background-clip: text;
       color: transparent;
@@ -82,37 +94,46 @@ main {
       transition: 0.9s ease;
     }
   }
+  
   .empty-heart:hover{
     opacity: 0;
   }
 }
 
-#section-menus {
-  margin: 0 11% 0 11%;
+@media all and (min-width: 1300px)
+{
+  #section-menus {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 1rem;
+  }
 }
 
 .menu-block {
-  padding: 1rem;
-}
-
-.menu-block  h2 {
-  width: 50px;
-  padding-bottom: 5px;
-  font-size: 18px;
-  font-weight: lighter;
-  border-bottom-style: solid;
-  border-bottom-width: 4px;
-  border-color: #99E2D0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+  
+  & h2 {
+    width: 3rem; /*barre verte sous titre*/
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: lighter;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-color: #99E2D0;
+  }
 }
 
 .menu {
   display: flex;
-  overflow: hidden;
+  overflow: hidden; /*La propriété CSS overflow est une propriété raccourcie qui définit comment gérer le dépassement du contenu d'un élément dans son bloc*/
   background-color: $colour-white;
-  width: 100%;
-  margin: 1.5rem 0;
-  border-radius: 10px;
+  margin: 1rem 0;
+  border-radius: 1rem;
   padding: 1rem;
+  box-shadow: 0 1px 8px $colour-shadow; /* offset-x | offset-y | blur-radius | color */
+  max-width: 100%;
 }
 
 @keyframes fadeIn
@@ -129,66 +150,55 @@ main {
 .fade-1 {
   animation: fadeIn 300ms;
 }
-
 .fade-2 {
   animation: fadeIn 600ms;
 }
-
 .fade-3 {
   animation: fadeIn 900ms;
 }
-
+.fade-3-bis {
+  animation: fadeIn 1050ms;
+}
 .fade-4 {
-  animation: fadeIn 1100ms;
+  animation: fadeIn 1200ms;
 }
-
 .fade-5 {
-  animation: fadeIn 1400ms;
+  animation: fadeIn 1500ms;
 }
-
 .fade-6 {
-  animation: fadeIn 1700ms;
+  animation: fadeIn 1800ms;
 }
-
 .fade-7 {
-  animation: fadeIn 2000ms;
+  animation: fadeIn 2100ms;
 }
-
 .fade-8 {
-  animation: fadeIn 2300ms;
+  animation: fadeIn 2400ms;
 }
-
 .fade-9 {
-  animation: fadeIn 2600ms;
+  animation: fadeIn 2700ms;
 }
 
-.menu-text {
+.menu-text{
   flex: 1;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-}
-
-.menu-text .title {
-  margin: 0 0 0 0;
-  font-size: 20px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.menu-text .description {
-  margin: 0 0 0 0;
-  font-size: 17px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.title {
-  margin: 0 0 0 0;
-  font-size: 17px;
-  padding-top: 3px;
+  
+  & .title{
+    margin: 0;
+    font-size: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  & .description {
+    margin: 0;
+    font-size: 17px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
 .menu-prix {
@@ -203,14 +213,6 @@ main {
   padding-left: 10px;
 }
 
-.menu:hover .check {
-  margin-right: -1rem;
-}
-
-.menu:hover .check-icon {
-  transform: rotate(0deg);
-}
-
 .check {
   background-color: $colour-tertiary;
   margin: -1rem -5rem -1rem 1rem;
@@ -218,7 +220,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-duration: .5s;
+  transition-duration: 500ms; /*transition-duration définit le nbr de s/ms que doit durer une animation*/
 }
 
 .check-icon {
@@ -226,7 +228,17 @@ main {
   font-size: 30px;
   font-weight: bold;
   transform: rotate(180deg);
-  transition-duration: .5s;
+  transition-duration: 500ms;
+}
+
+.menu:hover {
+  & .check {
+    margin-right: -1rem;
+  }
+  
+  & .check-icon {
+    transform: rotate(0deg);
+  }
 }
 
 .btn-box {
@@ -234,25 +246,26 @@ main {
 }
 
 .btn {
-  border-radius: 50px;
+  border-radius: 3rem;
   background: linear-gradient($colour-secondary,$colour-primary); 
   color: $colour-white;
   font-weight: bold;
-  padding: 18px 50px 18px 50px;
+  padding: 1rem 3rem;
   font-size: 17px;
   border: none;
-  margin: 10px 0 50px 0;
+  margin: 2.5rem 0 4rem 0;
   position: relative;
   z-index: 1;
   box-shadow: 0px 3px 15px $colour-shadow;
   justify-content: center;
   &:hover {
     &::after {
-      opacity: 0.25;
+      opacity: 0.15;
     }
   }
   &::after {
-    content: "";
+    content: ""; /*La propriété "content" nous permet de remplir un pseudoélément de texte ou d’images, mais dans le cas de notre bouton, nous ne voulons pas y ajouter de contenu. 
+    Nous voulons plutôt que ::after agisse comme un fond de couleur.*/
     position: absolute;
     top: 0;
     right: 0;
@@ -263,42 +276,45 @@ main {
     z-index: -1;
     transition: opacity 250ms;
     box-shadow: 0px 3px 15px black;
-    border-radius: 50px;
+    border-radius: 3rem;
+  }
+  
+  & a {
+    color: white;
+    text-decoration: none;
   }
 }
 
-.btn a {
-  color: white;
-  text-decoration: none;
-}
+/*L’ajout des éléments ::before ou ::after crée un élément enfant à chaque fois que son sélecteur a été assigné. 
+L’élément créé par ::before sera le premier enfant de l’élément, et celui créé par ::after sera le dernier*/
 
 #footer-box {
-  background-color: $colour-footer;
-  padding-top: 30px;
+  background-color: $colour-footer-icons;
+  padding-top: 2rem;
 }
 
 .ohmyfood {
   font-family:'Shrikhand';
   font-size: 26px;
   color: $colour-white;
-  margin-left: 8%;
+  margin-left: 11%;
 }
 
-.footer-text {
-  margin-left: 8%;
+.footer-text{
+  margin-left: 11%;
   color: $colour-white;
-  padding: 20px 0 20px 0;
+  padding: 1.5rem 0;
   line-height: 200%;
   font-size: 20px;
-}
-
-.footer-text a {
-  text-decoration: none;
-  color: $colour-white;
-}
-
-.footer-text a:hover {
-  text-decoration: underline;
+  
+  & a{
+    text-decoration: none;
+    color: $colour-white;
+    
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
 
 .footer-block {
@@ -315,13 +331,17 @@ main {
 
 /*--------------------------------------------------------------------------------------------------------------*/
 
-@media all and (min-width: 440px) and (max-width: 1200px)
+@media all and (max-width: 1300px)
 {
+  
+  .main-box
+  {
+    margin: 0 0.5rem;
+  }
   
   #section-menus {
     display: flex;
     flex-direction: column;
-    margin: 0 10px 0 10px; 
   }
   
   .menu {
@@ -329,91 +349,33 @@ main {
     width: auto;
   }
   
-  .nom-resto h1 {  
-    margin-left: 30px;
+  .ohmyfood {
+    margin-left: 1.5rem;
   }
   
-  .nom-resto i {
-    margin-right: auto;
-  }
-  
-  .fav {
-    position: relative; /*bloc englobant*/
-    margin-right: 30px;
-  }
-  
+  .footer-text {
+    margin-left: 1.5rem;
+  } 
 }
 
-/*----------------------------------------------------------------------------------------------------------------------------*/
+@media all and (max-width: 375px)
+{
+  .nom-resto h1
+  {
+    font-size: 27px;
+  }
+}
 
-@media all and (min-width: 316px) and (max-width: 439px)
+@media all and (min-width: 320px) and (max-width: 360px)
 {
   #header {
-    padding: 2rem 1.5rem 2rem 1.5rem;
-  }
-  
-  #section-menus {
-    flex-direction: column;
-    margin: 0 5px;
-  }
-  
-  .menu {
-    width: auto;
-  }
-  
-  .nom-resto h1 {  
-    margin-left: 20px;
-    font-size: 26px;
-  }
-  
-  .nom-resto i {
-    margin-right: auto;
-  }
-  
-  .title {
-    font-size: 17px;
-  }
-  
-  .description {
-    margin: 0;
-    font-size: 14px;
-  }
-  
-  .ohmyfood {
-    font-size: 24px;
-  }
-  
+    padding: 2rem 1.5rem;
+  }  
 }
-
-/*-----------------------------------------------------------------------------------------------------------*/
 
 @media all and (max-width: 315px)
 {
   #header {
-    padding: 2rem 0.9rem 2rem 0.9rem;
+    padding: 2rem 0.9rem;
   }  
 }
-
-/*-------------------------------------------Tablettes version--------------------------------------*/
-
-/*--------------------------------------------Ipad - Ipad pro---------------------------------------*/
-
-@media all and (min-width: 768px) and (max-width: 1169px)
-{}
-
-/*-------------------------------------------Large Smartphones version--------------------------------------*/
-
-/*---------------------Pixel 2/2XL - Iphone S6/7/8 - S6/7/8 Plus - Iphone X - Surface Duo ------------------*/
-
-@media all and (min-width: 361px) and (max-width: 767px)
-{}
-/*-------------------------------------------Medium Smartphones version--------------------------------------*/
-
-/*--------------------------------------------Moto G4 - Galaxy S5--------------------------------------------*/
-
-@media all and (min-width: 321px) and (max-width: 360px)
-{}
-
-/*-------------------------------------------Small Smartphones version--------------------------------------*/
-
-/*-------------------------------------------Iphone 5/SE - Galaxy fold--------------------------------------*/

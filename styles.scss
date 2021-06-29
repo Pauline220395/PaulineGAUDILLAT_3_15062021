@@ -1,10 +1,4 @@
-/* 576px pour les téléphones en portrait
-768px pour les tablettes
-992px pour les ordinateurs portables
-1200px pour les grands écrans*/
-
-@font-face 
-{
+@font-face {
   font-family:'Shrikhand';
   src: url('fonts/Shrikhand/Shrikhand-Regular.ttf');
   
@@ -30,9 +24,8 @@ body {
   }
 }
 
-.loader
-{
-  animation: loader 0.01s;
+.loader {
+  animation: loader 1s;
   animation-delay: 2s;
   animation-fill-mode: both;
   position: fixed;
@@ -90,70 +83,61 @@ body {
   }
 }
 
-header
-{
-  padding: 2rem 3rem 2rem 3rem;
+header {
+  padding: 2rem 3rem;
 }
 
-#logo
-{
+#logo {
   text-align: center;
 }
 
-#section-1
-{
+#section-1 {
   text-align: center;
-  background-color: $colour-background; 
-}
-
-.localisation
-{
+  background-color: $colour-background;
   
+  & h1 {
+    margin: 2rem 0;
+    font-weight: 900;
+    font-size: 28px;
+  }
+
+  & h2 {
+    margin: 0 0 2rem 0;
+    font-size: 20px;
+    font-weight: lighter;
+  }
+}
+
+.localisation {  
   background-color: $colour-search;
-  padding: 20px 0;
+  padding: 1.3rem 0;
   box-shadow: inset 0px 2px 7px $colour-shadow;
   font-weight: bold;
   color: #353535;
   font-size: 20px;
-}
 
-.localisation i
-{
-  padding-right: 1%;
-  font-size: 20px;
-  color: #353535;
+  & i {
+    padding-right: 1.5rem;
+    font-size: 20px;
+    color: $colour-footer-icons; 
+  }
 }
-
-#section-1 h1
-{
-  margin: 30px 0 20px 0;
-  font-weight: 900;
-  font-size: 28px;
-}
-
-#section-1 h2
-{
-  margin: 0 0 30px 0;
-  font-size: 20px;
-  font-weight: lighter;
-}
-
 
 .btn {
-  border-radius: 50px;
+  border-radius: 3rem;
   background: linear-gradient($colour-secondary,$colour-primary); 
   color: $colour-white;
   font-weight: bold;
-  padding: 18px 17px 18px 17px;
+  padding: 1rem 1.5rem;
   font-size: 17px;
   border: none;
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
   position: relative;
   z-index: 1;
   box-shadow: 0px 3px 15px $colour-shadow;
   &:hover {
     &::after {
-      opacity: 0.25;
+      opacity: 0.15;
     }
   }
   &::after {
@@ -168,45 +152,40 @@ header
     z-index: -1;
     transition: opacity 250ms;
     box-shadow: 0px 3px 15px black;
-    border-radius: 50px;
+    border-radius: 3rem;
+  }
+
+  & a {
+    color: white;
+    text-decoration: none;
   }
 }
 
-.btn a
-{
-  color: white;
-  text-decoration: none;
+#fonctionnement-section {
+  margin: 3rem 11%;
+
+  & h2 {
+    font-weight: bold;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
 }
 
-#fonctionnement-section
-{
-  margin: 3rem 8rem;
-}
-
-#fonctionnement-section h2
-{
-  font-weight: bold;
-  margin-left: 0;
-  margin-bottom: 30px;
-}
-
-.fonctionnement
-{
+.fonctionnement {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.etiquettes{
+.etiquettes {
   display: flex;
   align-items: center;
   width: 60%;
-  margin: 0 20px;
+  margin: 0 1.5rem;
   position: relative;
 }
 
-.number
-{
+.number {
   background-color: $colour-primary;
   padding: 5px 10px 5px 10px;
   color: $colour-white;
@@ -216,11 +195,10 @@ header
   margin: -15px;
 }
 
-.block
-{
+.block {
   display: flex;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   padding: 1rem;
   width: 100%;
   box-shadow: 0px 2px 15px $colour-shadow; /* 1 décalage horizontal - 2 vertical - 3 adoucicement - 4 couleur*/
@@ -242,48 +220,42 @@ header
     opacity: 0;
     z-index: -1;
     transition: opacity 250ms;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     box-shadow: 0px 4px 15px $colour-primary;
+  }
+
+  & i {
+    color: $colour-icons; 
+  }
+
+  & p {
+    font-weight: bold;
   }
 }
 
-.block i
-{
-  color: $colour-icons; 
-}
-
-.block p
-{
-  font-weight: bold;
-}
-
-.mobile
-{
+.mobile {
   padding: 0 22px 0 25px;
   font-size: 22px;
 }
 
-.list
-{
-  padding: 0 22px 0 22px;
+.list {
+  padding: 0 22px;
   font-size: 20px;
 }
 
-.store
-{
-  padding: 0 22px 0 22px;
+.store {
+  padding: 0 22px;
   font-size: 19px;
 }
 
-#Restaurants
-{
+#Restaurants {
   background-color: $colour-background;
-  padding: 2rem 0; 
-}
-
-#Restaurants h2 
-{
-  margin: 2rem 8rem;
+  padding: 2rem 0;
+  
+  & h2
+  {
+    margin: 2rem 11%;
+  }
 }
 
 .restaurant-box
@@ -291,7 +263,7 @@ header
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0rem 6rem;
+  margin: 0 9%;
 }
 
 .restaurants-cards
@@ -299,30 +271,27 @@ header
   background-color: $colour-white;
   width: 45%;
   height: 250px;
-  border-radius: 25px;
+  border-radius: 2rem;
   box-shadow: 0 2px 20px $colour-shadow;
   margin: auto ;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   padding-bottom: 5px;
-}
 
-.restaurants-cards a
-{
-  text-decoration: none;
+  & a {
+    text-decoration: none;
+  }
 }
 
 /*Pour les éléments qui sont position: absolute, 
 propriétés top/right/bottom/left définit la distance entre le bord de la marge de l'élément et le bord haut du bloc englobant. 
 (il faut que le bloc englobant ait position: relative).*/
 
-.new-box
-{
+.new-box {
   position: relative; /*bloc englobant*/
   margin: 0;
 }
 
-.new
-{
+.new {
   position: absolute; /*élément absolute*/
   background-color: $colour-tertiary;
   color: #008766;
@@ -334,55 +303,50 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
   font-weight: bold;
 }
 
-.restaurants-cards img 
-{
+.restaurants-cards img {
   width: 100%;
-  height: 160px;
+  height: 10rem;
   object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px; 
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem; 
 }
 
-.description-cards
-{
+.description-cards {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.text-cards
-{
+.text-cards {
   flex-direction: column;
   align-items: center;
-  margin: 18px 0 0 20px;
+  margin: 0.8rem 0 0 1.5rem;
+
+  & h3 {
+    font-size: 23px;
+    color: black;
+    width: 100%;
+    margin: 0 0 5px 0;
+  }
+
+  & p {
+    font-size: 20px;
+    color: black;
+    margin: 0;
+  }
 }
 
-.text-cards h3
-{
-  font-size: 23px;
-  color: black;
-  width: 100%;
-  line-height: 0;
-  margin-top: 10px;
-}
-
-.text-cards p
-{
-  font-size: 20px;
-  color: black;
-  line-height: 1;
-}
-
-.fav{
+.fav {
   position: relative; /*bloc englobant*/
-  margin-right: 40px;
+  margin: 15px 40px 0 0;
   i {
     color: $colour-icons; 
     font-size: 30px;
   }
+
   .full-heart{
     position: absolute; /*élément absolute*/
-    left: 0px; /* a 0-left du bloc englobant*/
+    left: 0; /* a 0-left du bloc englobant*/
     opacity: 0;
     &:hover{
       background: linear-gradient(to top, $colour-primary, $colour-secondary);
@@ -397,106 +361,94 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
   }
 }
 
-#footer-box
-{
-  background-color: $colour-footer;
-  padding-top: 30px;
+#footer-box {
+  background-color: $colour-footer-icons;
+  padding-top: 2rem;
 }
 
-.ohmyfood
-{
+.ohmyfood {
   font-family:'Shrikhand';
   font-size: 26px;
   color: $colour-white;
-  margin-left: 8%;
+  margin-left: 11%;
 }
 
-.footer-text
-{
-  margin-left: 8%;
+.footer-text {
+  margin-left: 11%;
   color: $colour-white;
-  padding: 20px 0 20px 0;
+  padding: 1.5rem 0;
   line-height: 200%;
   font-size: 20px;
+  
+  & a {
+    text-decoration: none;
+    color: $colour-white;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-.footer-text a
-{
-  text-decoration: none;
-  color: $colour-white;
-}
-
-.footer-text a:hover
-{
-  text-decoration: underline;
-}
-
-.footer-block
-{
+.footer-block {
   display: flex;
 }
 
-.utensils
-{
+.utensils {
   padding: 0 25px 0 5px;
 }
 
-.hands
-{
+.hands {
   padding-right: 20px;
 }
 
 /*-----------------------Version Smartphone----------------------*/
 
-@media all and (min-width: 321px) and (max-width: 1189px)
+@media all and (max-width: 1300px)
 {
-  .titles-box
-  {
+  .titles-box {
     margin: 0 2rem;
   }
   
-  #fonctionnement-section
-  {
+  #fonctionnement-section {
     margin: 3rem 2rem;
+
+    & h2 {
+      margin-left: -10px; 
+    }
   }
   
-  #fonctionnement-section h2
-  {
-    margin-left: -10px;
-    
-  }
-  
-  .fonctionnement
-  {
+  .fonctionnement {
     flex-direction: column;
     margin: 0 0 0 10px;
   }
   
-  .etiquettes
-  {
+  .etiquettes {
     width: 100%;
     margin-bottom: 20px;
   }
   
-  .restaurant-box
-  {
+  .restaurant-box {
     flex-direction: column;
-    margin: 0rem 1.5rem;
+    margin: 0 1.5rem;
   }
   
-  #Restaurants h2 
-  {
+  #Restaurants h2 {
     margin: 2rem 1.5rem;
   }
   
-  .restaurants-cards
-  {
+  .restaurants-cards {
     width: 100%;
+  } 
+}
+
+@media all and (max-width: 330px)
+{
+  .text-cards h3 {
+    font-size: 18px;
+    }
+
+  .text-cards p {
+    font-size: 16px;
   }
-  
-  .new
-  {
-    margin-left: 0%;
-  }
-  
 }
