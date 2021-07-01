@@ -1,15 +1,15 @@
 @font-face {
   font-family:'Shrikhand';
-  src: url('fonts/Shrikhand/Shrikhand.ttf');  
+  src: url('../fonts/Shrikhand/Shrikhand-Regular.ttf'); 
   font-family:'Roboto';
-  src: url('fonts/Roboto/Roboto-Black.ttf');
-  src: url('fonts/Roboto/Roboto-Bold.ttf');
-  src: url('fonts/Roboto/Roboto-Medium.ttf');
-  src: url('fonts/Roboto/Roboto-Light.ttf');
-  src: url('fonts/Roboto/Roboto-Regular.ttf');
+  src: url('../fonts/Roboto/Roboto-Black.ttf');
+  src: url('../fonts/Roboto/Roboto-Bold.ttf');
+  src: url('../fonts/Roboto/Roboto-Medium.ttf');
+  src: url('../fonts/Roboto/Roboto-Light.ttf');
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
 }
 
-@import "./utils/variables";
+@import "../utils/variables";
 
 body {
   font-family: "Roboto";
@@ -50,7 +50,7 @@ main {
   margin: 0 11%;
 }
 
-@media all and (max-width: 1665px)
+@media all and (max-width: 1665px) /* Pour laisser le menu lisible avant de passer au format tablette*/
 {
 .main-box
 {
@@ -327,7 +327,7 @@ L’élément créé par ::before sera le premier enfant de l’élément, et ce
   padding-right: 20px;
 }
 
-/*--------------------------------------------------------------------------------------------------------------*/
+/*-----------------------Media Tablette et Smartphone----------------------*/
 
 @media all and (max-width: 1300px)
 {
@@ -355,6 +355,8 @@ L’élément créé par ::before sera le premier enfant de l’élément, et ce
     margin-left: 1.5rem;
   } 
 }
+
+/*-----------------------Média small-smartphone----------------------*/
 
 @media all and (max-width: 375px)
 {

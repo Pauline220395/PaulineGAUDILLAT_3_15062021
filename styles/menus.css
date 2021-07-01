@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Shrikhand";
-  src: url("../fonts/Shrikhand/Shrikhand.ttf");
+  src: url("../fonts/Shrikhand/Shrikhand-Regular.ttf");
   font-family: "Roboto";
   src: url("../fonts/Roboto/Roboto-Black.ttf");
   src: url("../fonts/Roboto/Roboto-Bold.ttf");
@@ -341,7 +341,7 @@ L’élément créé par ::before sera le premier enfant de l’élément, et ce
   padding-right: 20px;
 }
 
-/*--------------------------------------------------------------------------------------------------------------*/
+/*-----------------------Media Tablette et Smartphone----------------------*/
 @media all and (max-width: 1300px) {
   .main-box {
     margin: 0 0.5rem;
@@ -365,6 +365,7 @@ L’élément créé par ::before sera le premier enfant de l’élément, et ce
     margin-left: 1.5rem;
   }
 }
+/*-----------------------Média small-smartphone----------------------*/
 @media all and (max-width: 375px) {
   .nom-resto h1 {
     font-size: 27px;

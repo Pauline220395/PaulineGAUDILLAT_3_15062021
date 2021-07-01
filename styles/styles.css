@@ -54,6 +54,11 @@ body {
   height: 25px;
   margin: 8px;
   border-radius: 50%;
+  /*@for = faire une boucle - @for évalue un bloc un nombre de fois précisé lors de la création de la règle*/
+  /*@for = faire une boucle - @for évalue un bloc un nombre de fois précisé lors de la création de la règle*/
+  /*@for = faire une boucle - @for évalue un bloc un nombre de fois précisé lors de la création de la règle*/
+  /*@for = faire une boucle - @for évalue un bloc un nombre de fois précisé lors de la création de la règle*/
+  /*@for = faire une boucle - @for évalue un bloc un nombre de fois précisé lors de la création de la règle*/
 }
 .loading .dot::before {
   position: absolute;
@@ -101,6 +106,10 @@ body {
           animation-delay: 1s;
 }
 
+/*La pseudo-classe :nth-child(an+b) permet de cibler un élément qui possède an+b-1 éléments voisins (au même niveau) 
+avant lui dans l'arbre du document pour des valeurs entières n et qui possède un élément parent. 
+Autrement dit, un sélecteur utilisant cette pseudo-classe permettra de cibler les éléments fils d'un élément 
+dont les positions correspondent au motif an+b.*/
 @-webkit-keyframes wave {
   50%, 75% {
     transform: scale(2.5);
@@ -109,7 +118,6 @@ body {
     opacity: 0;
   }
 }
-
 @keyframes wave {
   50%, 75% {
     transform: scale(2.5);
@@ -120,6 +128,7 @@ body {
 }
 header {
   padding: 2rem 3rem;
+  /*1rem = environ 16px - 1em = 100% de la taille de base du navigateur*/
 }
 
 #logo {
@@ -181,6 +190,7 @@ header {
   bottom: 0;
   left: 0;
   background-color: white;
+  /* hover blanc*/
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
@@ -242,6 +252,7 @@ L’élément créé par ::before sera le premier enfant de l’élément, et ce
   opacity: 0.25;
 }
 .block::before {
+  /* hover violet : couleur primaire éclaircie*/
   content: "";
   position: absolute;
   top: 0;
@@ -427,7 +438,7 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
   padding-right: 20px;
 }
 
-/*-----------------------Version Smartphone----------------------*/
+/*-----------------------Media Tablette et Smartphone----------------------*/
 @media all and (max-width: 1300px) {
   .titles-box {
     margin: 0 2rem;
@@ -463,6 +474,7 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
     width: 100%;
   }
 }
+/*-----------------------Média small-smartphone----------------------*/
 @media all and (max-width: 330px) {
   .text-cards h3 {
     font-size: 18px;
