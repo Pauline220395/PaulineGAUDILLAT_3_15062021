@@ -58,7 +58,7 @@ body {
       animation: wave 2s ease-out infinite;
     }
     
-    @for $i from 1 through 5 { /*@for = faire une boucle - @for évalue un bloc un nombre de fois précisé lors de la création de la règle*/
+    @for $i from 1 through 5 {
       &:nth-child(#{$i}) { 
         background: nth($colour-loader, $i);
         
@@ -69,6 +69,8 @@ body {
     }
   }
 }
+
+/*@for = faire une boucle - @for évalue un bloc un nombre de fois précisé lors de la création de la règle*/
 
 /*La pseudo-classe :nth-child(an+b) permet de cibler un élément qui possède an+b-1 éléments voisins (au même niveau) 
 avant lui dans l'arbre du document pour des valeurs entières n et qui possède un élément parent. 
