@@ -106,7 +106,7 @@ header {
     font-weight: 900;
     font-size: 28px;
   }
-
+  
   & h2 {
     margin: 0 0 2rem 0;
     font-size: 20px;
@@ -121,7 +121,7 @@ header {
   font-weight: bold;
   color: #353535;
   font-size: 20px;
-
+  
   & i {
     padding-right: 1.5rem;
     font-size: 20px;
@@ -161,7 +161,7 @@ header {
     box-shadow: 0px 3px 15px black;
     border-radius: 3rem;
   }
-
+  
   & a {
     color: white;
     text-decoration: none;
@@ -173,7 +173,7 @@ L’élément créé par ::before sera le premier enfant de l’élément, et ce
 
 #fonctionnement-section {
   margin: 3rem 11%;
-
+  
   & h2 {
     font-weight: bold;
     margin-left: 0;
@@ -233,11 +233,11 @@ L’élément créé par ::before sera le premier enfant de l’élément, et ce
     border-radius: 1.5rem;
     box-shadow: 0px 4px 15px $colour-primary;
   }
-
+  
   & i {
     color: $colour-icons; 
   }
-
+  
   & p {
     font-weight: bold;
   }
@@ -286,7 +286,7 @@ L’élément créé par ::before sera le premier enfant de l’élément, et ce
   margin: auto ;
   margin-bottom: 2rem;
   padding-bottom: 5px;
-
+  
   & a {
     text-decoration: none;
   }
@@ -331,14 +331,14 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
   flex-direction: column;
   align-items: center;
   margin: 0.8rem 0 0 1.5rem;
-
+  
   & h3 {
     font-size: 23px;
     color: black;
     width: 100%;
     margin: 0 0 5px 0;
   }
-
+  
   & p {
     font-size: 20px;
     color: black;
@@ -353,7 +353,7 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
     color: $colour-icons; 
     font-size: 30px;
   }
-
+  
   .full-heart{
     position: absolute; /*élément absolute*/
     left: 0; /* a 0-left du bloc englobant*/
@@ -422,7 +422,7 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
   
   #fonctionnement-section {
     margin: 3rem 2rem;
-
+    
     & h2 {
       margin-left: -10px; 
     }
@@ -458,8 +458,8 @@ propriétés top/right/bottom/left définit la distance entre le bord de la marg
 {
   .text-cards h3 {
     font-size: 18px;
-    }
-
+  }
+  
   .text-cards p {
     font-size: 16px;
   }

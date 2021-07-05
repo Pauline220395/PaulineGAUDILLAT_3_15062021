@@ -19,6 +19,7 @@ body {
   /*1rem = environ 16px - 1em = 100% de la taille de base du navigateur*/
 }
 
+/* em = unité relative : Cette unité est proportionnelle à la taille de police de l'élément racine et est exprimée en ratio par rapport à 1, comme avec em.*/
 .arrow {
   position: absolute;
   align-items: center;
@@ -202,8 +203,11 @@ main {
 .menu-text {
   flex: 1;
   white-space: nowrap;
+  /*La propriété white-space est utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément.*/
+  /*nowrap passage a la ligne supprimé*/
   text-overflow: ellipsis;
   overflow: hidden;
+  /*La propriété CSS overflow est une propriété raccourcie qui définit comment gérer le dépassement du contenu d'un élément dans son bloc*/
 }
 .menu-text .title {
   margin: 0;
@@ -343,6 +347,10 @@ L’élément créé par ::before sera le premier enfant de l’élément, et ce
 
 /*-----------------------Media Tablette et Smartphone----------------------*/
 @media all and (max-width: 1300px) {
+  .banner img {
+    max-height: 350px;
+  }
+
   .main-box {
     margin: 0 0.5rem;
   }
@@ -366,6 +374,11 @@ L’élément créé par ::before sera le premier enfant de l’élément, et ce
   }
 }
 /*-----------------------Média small-smartphone----------------------*/
+@media all and (max-width: 540px) {
+  .banner img {
+    max-height: 276px;
+  }
+}
 @media all and (max-width: 375px) {
   .nom-resto h1 {
     font-size: 27px;
