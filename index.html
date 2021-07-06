@@ -42,8 +42,15 @@
   <!--barre recherche - titres - bouton explorer-->
   
   <section id="section-1">
-    
-    <div class="localisation"><i class="fas fa-map-marker-alt"></i> Paris, Belleville</div>
+ 
+  <div class="localisation">
+    <form method="post" action="traitement.php">
+      <p>
+        <label for="localisation"></label>
+        <i class="fas fa-map-marker-alt"></i><input type="text" name="localisation" id="localisation" size="25" value="Paris, Belleville"/>
+      </p>
+    </form>
+  </div>
     
     <div class="titles-box">
       <h1>Réservez le menu qui vous convient</h1>

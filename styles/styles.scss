@@ -114,18 +114,39 @@ header {
   }
 }
 
-.localisation {  
+.localisation {
   background-color: $colour-search;
-  padding: 1.3rem 0;
-  box-shadow: inset 0px 2px 7px $colour-shadow;
-  font-weight: bold;
-  color: #353535;
-  font-size: 20px;
-  
+  position: relative;
+
   & i {
-    padding-right: 1.5rem;
+    color: $colour-footer-icons;
     font-size: 20px;
-    color: $colour-footer-icons; 
+    position: absolute;
+    padding: 1.1rem 0 1rem 2rem; 
+  }
+
+  & p {
+    margin: 0;
+  }
+}
+
+#localisation {
+  height: 55px;
+  border-color: transparent;
+  background-color: $colour-search;
+}
+
+input {
+  font-weight: bold;
+  font-size: 20px;
+  font-family:'Roboto', sans-serif;
+  text-align: center;
+  color: $colour-footer-icons;
+  border: none;
+  padding: 0;
+
+  &:focus {
+    outline: none;
   }
 }
 
